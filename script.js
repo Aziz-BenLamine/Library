@@ -48,12 +48,28 @@ function addBookToLibrary(event) {
     let newBook = new Book(title, author, pages, read);
     myLibrary.push(newBook);
     render();
+    newBookForm.style.display = "none";
+    backdrop.style.display = "none";
 }
 
 let addBookbtn = document.querySelector("#add-book-btn");
 addBookbtn.addEventListener("click", function () {
     let newBookForm = document.querySelector("#new-book-form");
-    newBookForm.style.display = "block";
+    let backdrop = document.querySelector("#backdrop");
+
+    if(newBookForm.style.display === "none" || !newBookForm.styledisplay){
+        newBookForm.style.display = "block";
+        backdrop.style.display = "block";
+    }
+    else{
+        newBookForm.style.display = "none";
+        backdrop.style.display = "none";
+    }
+})
+
+document.querySelector("#backdrop").addEventListener("click", function(){
+    document.querySelector("#new-book-form").style.display = "none";
+    document.querySelector("#backdrop").style.display = "none";
 })
 
 document.querySelector("#new-book-form").addEventListener("submit", addBookToLibrary);
