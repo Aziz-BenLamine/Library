@@ -1,16 +1,37 @@
-*{
-    background-color: rgb(222, 221, 221);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header h1 {
+    background-color: transparent;
+    margin: 0;
 }
 
 #add-book-btn {
     display: block;
-    margin: 0 auto;
+    margin: 0;
     padding: 20px;
     font-size: 20px;
     background-color: blue;
     color: white;
     border: none;
-    border-radius: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
     cursor: pointer;
 }
 
@@ -25,8 +46,8 @@ form {
 }
 
 input[type="text"],
-  input[type="number"],
-  select {
+input[type="number"],
+select {
     width: 90%;
     padding: 12px;
     font-size: 16px;
@@ -37,22 +58,22 @@ input[type="text"],
     outline: none;
     transition: 0.3s;
     margin-bottom: 10px;
-  }
+}
 
-  input[type="text"]:focus,
-  input[type="number"]:focus,
-  select:focus {
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
     border-color: #333;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  }
+}
 
-  label {
+label {
     font-size: 18px;
     margin-bottom: 10px;
     display: block;
-  }
+}
 
-  input[type="submit"] {
+input[type="submit"] {
     width: 100%;
     padding: 12px 20px;
     font-size: 18px;
@@ -62,57 +83,59 @@ input[type="text"],
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #444;
-  }
+}
 
-  .book-card {
+input[type="submit"]:hover {
+    background-color: #444;
+}
+
+.book-card {
     display: inline-block;
-    width: 300px;
-    height: 200px;
+    width: 280px;
+    height: auto;
     margin: 10px;
-    padding: 20px;
-    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 25px;
+    border: 1px solid #e0e0e0;
     border-radius: 10px;
-    text-align: center;
-  }
-  
-  .book-header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .book-title {
-    margin: 0;
-    font-size: 22px;
-  }
-  
-  .book-author {
-    margin: 5px 0 0 0;
-    font-size: 18px;
-  }
-  
-  .book-body {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .book-pages {
-    margin: 0;
-    font-size: 18px;
-  }
-  
-  .book-status {
-    margin: 10px 0 0 0;
-    font-size: 16px;
+    text-align: left;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.book-header {
+    background-color: #fafafa;
     color: #333;
-  }
-  
-  button {
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+}
+
+.book-title {
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.book-author, .book-pages, .book-status {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.book-body {
+    padding: 15px 0;
+}
+
+button {
     padding: 10px 20px;
     border: 2px solid #333;
     border-radius: 5px;
@@ -120,13 +143,20 @@ input[type="text"],
     font-weight: bold;
     background-color: #fff;
     cursor: pointer;
-  }
-    
-  button:hover {
+}
+
+button:hover {
     background-color: #333;
     color: #fff;
-  }
+}
 
-  .read-status {
-    background-color:rgb(145, 145, 226);
-  } 
+.read-status {
+    background-color: rgb(145, 145, 226);
+}
+
+#library {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
