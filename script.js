@@ -44,10 +44,16 @@ function removeBook(index){
 
 function addBookToLibrary(event) {
     event.preventDefault();
-    let title = document.querySelector("#title").value;
-    let author = document.querySelector("#author").value;
+    let title = document.querySelector("#title").value.trim();
+    let author = document.querySelector("#author").value.trim();
     let pages = document.querySelector("#pages").value;
     let read = document.querySelector("#read").checked;
+
+    if (!title || !author || pages <= 0) {
+        alert("Please enter valid book details.");
+        return;
+    }
+
     let newBook = new Book(title, author, pages, read);
     myLibrary.push(newBook);
     render();
