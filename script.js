@@ -20,16 +20,19 @@ function render() {
         let book = myLibrary[i];
         let bookel = document.createElement("div");
         bookel.setAttribute("class", "book-card");
-        bookel.innerHTML = `<div class="card-header">
+        bookel.innerHTML = `
+    <div class="card-header">
         <h3 class="title">${book.title}</h3>
         <h5 class="author">by ${book.author}</h5>
-      </div>
-      <div class="card-body">
+    </div>
+    <div class="card-body">
         <p>${book.pages} pages</p>
-        <p class="read-status">${book.read ? "Read" : "Not Read Yet"}</p>
-        <button class="remove-btn" onclick="removeBook(${i})">Remove</button>
-        <button class="toggle-read-btn" onclick="toggleRead(${i})">Toggle Read</button>
-      </div>`;
+        <p class="read-status ${book.read ? "" : "not-read-status"}">${book.read ? "Read" : "Not Read Yet"}</p>
+        <div class="buttons">
+            <button class="remove-btn" onclick="removeBook(${i})">Remove</button>
+            <button class="toggle-read-btn" onclick="toggleRead(${i})">Toggle Read</button>
+        </div>
+    </div>`;
         Libraryel.appendChild(bookel);
     }
 }
