@@ -22,10 +22,12 @@ header {
     padding: 0 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
-html{
+
+html {
     height: 100%;
 }
-body{
+
+body {
     background-color: #F5F5F5;
     color: #333333;
     padding-top: 120px;
@@ -33,10 +35,11 @@ body{
     min-height: 100%;
 }
 
-p{
+p {
     margin: 10px 0;
     margin-left: 10px;
 }
+
 header h1 {
     background-color: transparent;
     font-size: 1.8em;
@@ -60,7 +63,7 @@ header h1 {
     cursor: pointer;
 }
 
-#add-book-btn:hover{
+#add-book-btn:hover {
     background-color: #2980B9;
     transform: translateY(-3px);
     box-shadow: 0 7px 20px rgba(0, 0, 0, 0.12);
@@ -70,7 +73,7 @@ form {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     z-index: 1001;
     background-color: #fff;
     width: 500px;
@@ -112,6 +115,10 @@ input[type="number"]:focus,
 select:focus {
     border-color: #333;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+input:valid {
+    border: 2px solid rgb(0, 193, 0);
 }
 
 label {
@@ -178,7 +185,9 @@ input[type="checkbox"] {
     line-height: 1.4;
 }
 
-.book-author, .book-pages, .book-status {
+.book-author,
+.book-pages,
+.book-status {
     font-size: 16px;
     margin-bottom: 15px;
     line-height: 1.5;
@@ -188,7 +197,8 @@ input[type="checkbox"] {
     padding: 15px 0;
 }
 
-.card-header, .card-body {
+.card-header,
+.card-body {
     padding: 15px;
     margin-bottom: 10px;
 }
@@ -196,12 +206,12 @@ input[type="checkbox"] {
 .card-body {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start;
     flex: 1;
     justify-content: space-between;
 }
 
-.card-header{
+.card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -224,8 +234,8 @@ button {
 }
 
 .buttons {
-    display: flex; 
-    width: 100%; 
+    display: flex;
+    width: 100%;
     justify-content: space-between;
 }
 
@@ -240,7 +250,8 @@ button {
     margin-left: 10px;
 }
 
-.remove-btn, .toggle-read-btn{
+.remove-btn,
+.toggle-read-btn {
     flex: 1;
     margin: 0 5px;
 }
@@ -273,8 +284,9 @@ button:hover {
     padding: 20px;
 }
 
-footer{
+footer {
     background-color: #f7f7f7;
+    opacity: 0.5;
     color: #2c3e50;
     padding: 20px 0;
     text-align: center;
