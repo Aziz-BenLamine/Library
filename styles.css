@@ -22,11 +22,15 @@ header {
     padding: 0 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
-
+html{
+    height: 100%;
+}
 body{
     background-color: #F5F5F5;
     color: #333333;
     padding-top: 120px;
+    position: relative;
+    min-height: 100%;
 }
 
 p{
